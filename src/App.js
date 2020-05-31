@@ -7,8 +7,12 @@ class App extends React.Component {
   }
   
   // Buat method handleClick
-  handleClick (){
+  handleClickPlus (){
     this.setState({count : this.state.count + 1})
+  }
+  
+  handleClickMin (){
+    this.setState({count : this.state.count - 1})
   }
   
   render() {
@@ -18,7 +22,8 @@ class App extends React.Component {
           {this.state.count}
         </h1>
         {/* tambahkan event onClick di tag <button> */}
-        <button onClick = {() => {this.handleClick()}}>+</button>
+        <button onClick = {() => {this.handleClickPlus()}}>+</button>
+        <button onClick = {() => {this.handleClickMin()}}>-</button>
         
       </div>
     );
